@@ -1,0 +1,134 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "height": 48,
+
+  // Margins should be synchronized to hyprland gaps
+  "margin-left": 8,
+  "margin-right": 8,
+  "margin-top": 8,
+  "margin-bottom": 0,
+
+  "modules-left": [
+    "custom/left-pad",
+    "disk",
+    "custom/separator",
+    "memory",
+    "custom/separator",
+    "cpu",
+    "custom/separator",
+    "temperature",
+    "custom/separator",
+    "network"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "backlight",
+    "custom/separator",
+    "wireplumber",
+    "custom/separator",
+    "battery",
+    "custom/separator",
+    "clock",
+    "custom/right-pad"
+  ],
+
+  "custom/separator": {
+    "format": "|",
+    "tooltip": false
+  },
+
+  "custom/left-pad": {
+    "format": " ",
+    "tooltip": false
+  },
+
+  "custom/right-pad": {
+    "format": " ",
+    "tooltip": false
+  },
+
+  "disk": {
+    "format": "<span size='18pt' rise='-2pt'>󰆼</span>  {percentage_used}%",
+    "tooltip-format": "{specific_used:.1f} GB/{specific_total:.1f} GB used on {path}",
+    "unit": "GB"
+  },
+
+  "memory": {
+    "interval": 3,
+    "format": "<span size='20pt' rise='-3pt'>{icon}</span>  {percentage}%",
+    "tooltip-format": "{used:.1f} GiB/{total:.1f} GiB used",
+    "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"]
+  },
+
+  "cpu": {
+    "interval": 3,
+    "format": "<span size='20pt' rise='-3pt'>{icon}</span>  {usage}%",
+    "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"]
+  },
+
+  "temperature": {
+    "interval": 3,
+    "format": "<span size='18pt' rise='-2pt'>{icon}</span> {temperatureC}°C",
+      "format-icons": ["", "", "", "", ""]
+  },
+
+  "network": {
+    "interval": 3,
+    "format-wifi": "<span size='18pt' rise='-2pt'>{icon}</span>  {bandwidthTotalBytes}",
+    "format-icons": ["󰤟", "󰤢", "󰤥"],
+    "format-disconnected": "󰤫",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n\n⬊ {bandwidthDownBytes} | ⬈ {bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "active": ""
+    },
+    "persistent-workspaces": {
+      "*": 6
+    }
+  },
+
+  "backlight": {
+    "format": "<span size='18pt' rise='-2pt'>{icon}</span>  {percent}%",
+    "tooltip-format": "{percent}%",
+    "format-icons": ["󰃞", "󰃠"]
+  },
+
+  "wireplumber": {
+    "format": "<span size='16pt' rise='-1pt'>{icon}</span>  {volume}%",
+    "format-muted": "<span size='22pt'>󰝟</span>",
+    "format-icons": ["", "", ""],
+    "tooltip-format": "{source_desc}"
+  },
+
+  "battery": {
+    "interval": 3,
+    "format": "<span size='18pt' rise='-2pt'>{icon}</span> {capacity}%",
+    "format-icons": {
+      "discharging": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "not charging": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "full": ["󰁹"],
+      "charging": ["󰂄"]
+    }
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    }
+  }
+}
