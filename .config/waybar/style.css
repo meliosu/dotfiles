@@ -1,3 +1,5 @@
+@import "colors.css";
+
 * {
   font-family: "JetBrainsMono Nerd Font";
   font-weight: bold;
@@ -5,19 +7,19 @@
 }
 
 window#waybar {
-  background: #0F0F17;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: @surface_container;
+  border: 2px solid @secondary_fixed_dim;
   border-radius: 8px;
 }
 
 tooltip {
-  background: rgba(0x0F, 0x0F, 17, 0.9);
+  background: @surface_container;
   border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
 }
 
 tooltip label {
-  color: #A1BDCE;
+  color: @primary;
 }
 
 #workspaces button {
@@ -35,12 +37,12 @@ tooltip label {
 }
 
 #workspaces button.active {
-  color: #A1BDCE;    
+  color: @primary;
 }
 
 #workspaces button:hover {
   background: none;
-  color: #80FF92;
+  color: @primary_fixed;
 }
 
 #workspaces button label {
@@ -56,9 +58,45 @@ tooltip label {
 #network,
 #disk,
 #temperature {
-  color: #A1BDCE;
+  color: @primary;
   margin-left: 12px;
   margin-right: 12px;
+}
+
+#disk {
+  color: @tertiary_fixed_dim;
+}
+
+#memory {
+  color: @primary_fixed;
+}
+
+#cpu {
+  color: @secondary_fixed;
+}
+
+#temperature {
+  color: @tertiary_fixed_dim;
+}
+
+#network {
+  color: @secondary_fixed_dim;
+}
+
+#backlight {
+  color: @tertiary;
+}
+
+#wireplumber {
+  color: @secondary;
+}
+
+#battery {
+  color: @primary;
+}
+
+#clock {
+  color: @primary_fixed;
 }
 
 #custom-right-pad {

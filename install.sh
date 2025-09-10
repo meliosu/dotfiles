@@ -40,6 +40,7 @@ pacman_packages=(
   openssh
   playerctl
   brightnessctl
+  inotify-tools
   
   # Audio
   pipewire

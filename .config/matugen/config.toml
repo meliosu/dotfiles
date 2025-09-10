@@ -1,0 +1,14 @@
+[config]
+caching = false
+
+# [templates.foot]
+# input_path = "./templates/foot-colors.ini"
+# output_path = "~/.config/foot/colors.ini"
+
+[templates.waybar]
+input_path = "./templates/waybar-colors.css"
+output_path = "~/.config/waybar/colors.css"
+
+[templates.hyprland]
+input_path = "./templates/hyprland-colors.conf"
+output_path = "~/.config/hypr/colors.conf"

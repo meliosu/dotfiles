@@ -15,3 +15,8 @@ swww img \
   --transition-pos $cursorpos \
   --invert-y \
   $wallpaper
+
+matugen image \
+  --type scheme-content \
+  --contrast 0.2 \
+  $wallpaper

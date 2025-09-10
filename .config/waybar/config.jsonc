@@ -10,6 +10,9 @@
   "margin-top": 8,
   "margin-bottom": 0,
 
+  // For matugen
+  "reload_style_on_change": true,
+
   "modules-left": [
     "custom/left-pad",
     "disk",
