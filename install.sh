@@ -32,8 +32,9 @@ pacman_packages=(
   slurp
   wf-recorder
 
-  # Wallpaper
+  # Wallpaper & status bar
   swww
+  waybar
 
   # System
   openssh
