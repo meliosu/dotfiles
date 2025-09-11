@@ -6,6 +6,15 @@ if [[ -z $wallpaper ]]; then
   wallpaper=$(readlink ~/.config/wallpapers/current)
 fi
 
+matugen image \
+  --type scheme-content \
+  --contrast 0.2 \
+  $wallpaper
+
+wallust run \
+  --palette dark \
+  $wallpaper
+
 cursorpos=$(hyprctl cursorpos | tr -d ' ')
 
 swww img \
@@ -14,13 +23,4 @@ swww img \
   --transition-type grow \
   --transition-pos $cursorpos \
   --invert-y \
-  $wallpaper
-
-matugen image \
-  --type scheme-content \
-  --contrast 0.2 \
-  $wallpaper
-
-wallust run \
-  --palette dark \
   $wallpaper
