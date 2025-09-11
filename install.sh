@@ -27,6 +27,9 @@ pacman_packages=(
   # Browser
   firefox
 
+  # App launcher and menu
+  rofi
+
   # For screenshots and screen recordings
   grim
   slurp
@@ -53,4 +56,5 @@ pacman_packages=(
 yay_packages=(
   # Wallpaper colors
   matugen-bin
+  wallust
 )
