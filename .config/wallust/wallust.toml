@@ -1,0 +1,3 @@
+[templates.foot]
+src = "foot-colors.ini"
+dst = "~/.config/foot/colors.ini"
