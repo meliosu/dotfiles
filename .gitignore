@@ -1,0 +1,5 @@
+.config/foot/colors.ini
+.config/hypr/colors.conf
+.config/nvim/lua/theme-override.lua
+.config/rofi/colors.rasi
+.config/waybar/colors.css
