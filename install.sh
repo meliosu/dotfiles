@@ -29,6 +29,7 @@ pacman_packages=(
 
   # App launcher and menu
   rofi
+  rofi-emoji
 
   # For screenshots and screen recordings
   grim
@@ -51,10 +52,14 @@ pacman_packages=(
 
   # Fonts
   ttf-jetbrains-mono-nerd
+  noto-fonts-emoji
 )
 
 yay_packages=(
   # Wallpaper colors
   matugen-bin
   wallust
+
+  # Unicode search for rofi
+  rofi-unicode
 )

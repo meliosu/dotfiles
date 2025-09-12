@@ -1,3 +1,7 @@
 [templates.foot]
 src = "foot-colors.ini"
 dst = "~/.config/foot/colors.ini"
+
+[templates.nvim]
+src = "nvim-theme-override.lua"
+dst = "~/.config/nvim/lua/theme-override.lua"

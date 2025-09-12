@@ -6,7 +6,11 @@
 local M = {}
 
 M.base46 = {
-	theme = "tomorrow_night",
+  theme = "tomorrow_night",
+
+  changed_themes = {
+    all = require "theme-override"
+  },
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
