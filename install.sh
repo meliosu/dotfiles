@@ -17,6 +17,7 @@ pacman_packages=(
   ripgrep
   fastfetch
   cmatrix
+  jq
 
   # Terminal
   foot
@@ -36,15 +37,21 @@ pacman_packages=(
   slurp
   wf-recorder
 
-  # Wallpaper & status bar
+  # Wallpaper
   swww
+
+  # Status bar
   waybar
+
+  # Notification server
+  swaync
 
   # System
   openssh
   playerctl
   brightnessctl
   inotify-tools
+  libnotify
   
   # Audio
   pipewire

@@ -1,0 +1,39 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+
+  "fit-to-screen": false,
+  "control-center-width": 500,
+  "control-center-height": 700,
+  "control-center-margin-right": 20,
+  "control-center-margin-top": 20,
+
+  "transition-time": 300,
+
+  "timeout": 5,
+  "timeout-low": 3,
+  "timeout-critical": 0,
+  "notification-grouping": false,
+
+  "widgets": [
+    "buttons-grid",
+    "title",
+    "notifications",
+    "dnd"
+  ],
+
+  "widget-config": {
+    "title": {
+      "text": "",
+      "button-text": "Clear"
+    },
+    "buttons-grid": {
+      "actions": [
+        {
+          "type": "normal",
+          "label": "HELLO",
+          "command": "notify-send hello"
+        }
+      ]
+    }
+  }
+}

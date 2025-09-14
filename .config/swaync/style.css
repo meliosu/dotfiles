@@ -1,0 +1,36 @@
+@import "colors.css";
+
+* {
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 12pt;
+  box-shadow: unset;
+}
+
+.notification-row,
+.notification,
+.notification-background {
+  margin: unset;
+  padding: unset;
+}
+
+.control-center {
+  background: @surface_container;
+  border-radius: 8px;
+}
+
+.notification {
+  border-radius: 8px;
+}
+
+.summary {
+  color: @primary;
+}
+
+.time {
+  color: @secondary;
+}
+
+.notification-background .critical {
+  background: @error_container;
+  color: @on_error;
+}

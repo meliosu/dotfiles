@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env sh
 
 WALLPAPERS_DIR=~/.config/wallpapers
 CURRENT_SYMLINK=~/.config/wallpapers/current

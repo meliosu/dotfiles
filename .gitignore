@@ -3,3 +3,4 @@
 .config/nvim/lua/theme-override.lua
 .config/rofi/colors.rasi
 .config/waybar/colors.css
+.config/swaync/colors.css

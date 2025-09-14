@@ -15,7 +15,7 @@ configuration {
   display-drun:               "";
   display-run:                "";
   display-window:             "";
-  display-emoji:              "";
+  display-emoji:              "E";
   display-unicode:            "U";
   drun-display-format:        "{name}";
   window-format:              "{w} · {c} · {t}";
