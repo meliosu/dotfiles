@@ -7,7 +7,7 @@
   "control-center-margin-right": 20,
   "control-center-margin-top": 20,
 
-  "transition-time": 300,
+  "transition-time": 200,
 
   "timeout": 5,
   "timeout-low": 3,
@@ -15,7 +15,6 @@
   "notification-grouping": false,
 
   "widgets": [
-    "buttons-grid",
     "title",
     "notifications",
     "dnd"
@@ -25,15 +24,6 @@
     "title": {
       "text": "",
       "button-text": "Clear"
-    },
-    "buttons-grid": {
-      "actions": [
-        {
-          "type": "normal",
-          "label": "HELLO",
-          "command": "notify-send hello"
-        }
-      ]
     }
   }
 }

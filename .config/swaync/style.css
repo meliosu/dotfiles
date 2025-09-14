@@ -1,14 +1,21 @@
 @import "colors.css";
 
+:root {
+  --border-radius: 8px;
+}
+
 * {
   font-family: "JetBrainsMono Nerd Font";
   font-size: 12pt;
   box-shadow: unset;
+  border: unset;
+  border-radius: var(--border-radius);
 }
 
-.notification-row,
 .notification,
-.notification-background {
+.notification-row,
+.notification-background,
+.notification-content {
   margin: unset;
   padding: unset;
 }
@@ -16,10 +23,15 @@
 .control-center {
   background: @surface_container;
   border-radius: 8px;
+  border: 2px solid @secondary_fixed_dim;
+}
+
+.control-center .notification-background {
+  background: @surface_container;
 }
 
 .notification {
-  border-radius: 8px;
+  border: 2px solid @outline;
 }
 
 .summary {
@@ -33,4 +45,25 @@
 .notification-background .critical {
   background: @error_container;
   color: @on_error;
+  border-color: @on_error;
+}
+
+.notification {
+  background: @primary_container;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.floating-notifications .notification {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.floating-notifications {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.notification-row .notification-background .notification .notification-default-action:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
