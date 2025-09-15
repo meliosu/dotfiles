@@ -6,6 +6,8 @@ if [[ -z $wallpaper ]]; then
   wallpaper=$(readlink ~/.config/wallpapers/current)
 fi
 
+ln -sf $wallpaper ~/.config/wallpapers/current
+
 matugen image \
   --type scheme-content \
   --contrast 0.2 \

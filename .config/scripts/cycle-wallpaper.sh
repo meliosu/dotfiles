@@ -41,6 +41,4 @@ else
   next_wallpaper=${wallpapers[0]}
 fi
 
-ln -sf $next_wallpaper $CURRENT_SYMLINK
-
 ~/.config/scripts/set-wallpaper.sh $next_wallpaper

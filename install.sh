@@ -69,4 +69,7 @@ yay_packages=(
 
   # Unicode search for rofi
   rofi-unicode
+
+  # Widgets
+  eww
 )

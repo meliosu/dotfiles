@@ -16,3 +16,7 @@ output_path = "~/.config/rofi/colors.rasi"
 [templates.swaync]
 input_path = "./templates/swaync-colors.css"
 output_path = "~/.config/swaync/colors.css"
+
+[templates.eww]
+input_path = "./templates/eww-colors.scss"
+output_path = "~/.config/eww/colors.scss"

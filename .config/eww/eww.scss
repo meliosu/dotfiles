@@ -1,0 +1,62 @@
+@import "colors.scss";
+
+$border-radius: 8px;
+
+* {
+  box-shadow: unset;
+  border: unset;
+}
+
+.activate-linux {
+  background: none;
+  color: rgba(255, 255, 255, 0.4);
+
+  .label-activate {
+    font-size: 30px;
+  }
+
+  .label-go-to-settings {
+    font-size: 22px;
+  }
+}
+
+.wallpaper-picker {
+  background: $surface_container;
+  border-radius: $border-radius;
+  border: 2px solid $secondary_fixed_dim;
+
+  .wallpapers {
+    margin: 2px;
+  }
+
+  .wallpaper {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+
+    &:hover {
+      background: $surface_container_high;
+    }
+  }
+
+  .controls {
+    .prev, .next {
+      background: $surface_container_low;
+      border-radius: $border-radius;
+      border: 2px solid $primary;
+      font-size: 40px;
+      font-weight: bold;
+      color: $primary;
+      margin: 16px;
+
+      &:hover {
+        color: $primary_fixed;
+      }
+    }
+  }
+
+  .close {
+    background: none;
+    margin: 8px;
+    font-size: 22px;
+  }
+}

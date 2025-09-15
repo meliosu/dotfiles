@@ -1,0 +1,107 @@
+;; Activate Linux
+
+(defwidget activate-linux []
+  (box
+    :orientation "v"
+    :halign "start"
+    :valign "start"
+    (label :class "label-activate" :xalign 0 :text "Activate Linux")
+    (label :class "label-go-to-settings" :xalign 0 :text "Go to Settings to activate Linux")))
+
+(defwindow activate-linux
+  :monitor 0
+  :stacking "fg"
+  :geometry (geometry :x "120px" :y "100px" :width "320px" :anchor "bottom right")
+  (activate-linux))
+
+
+;; Wallpaper picker
+
+(defpoll wallpapers :interval "10s" "./scripts/list-wallpapers.sh")
+(defvar page 0)
+
+(
+  defwidget wallpaper-picker []
+  (
+    overlay
+    (
+      box
+      :class "wallpapers"
+      :orientation "v"
+      (
+        for row in "[0, 1, 2, 3]"
+        (
+          box
+          :class "row"
+          :orientation "h"
+          (
+            for column in "[0, 1, 2, 3]"
+            (
+              eventbox
+              :class "wallpaper"
+              :onclick
+              {
+                page * 16 + row * 4 + column < arraylength(wallpapers) ?
+                "eww close wallpaper-picker && hyprctl dispatch exec ~/.config/scripts/set-wallpaper.sh ${wallpapers[page * 16 + row * 4 + column]}" :
+                ""
+              }
+              (
+                image
+                :image-width 300
+                :image-height 160
+                :path { wallpapers[page * 16 + row * 4 + column] ?: "./assets/1x1.png" }
+              )
+            )
+          )
+        )
+      )
+    )
+    (
+      box
+      :class "controls"
+      :orientation "h"
+      :valign "end"
+      (
+        button
+        :class "prev"
+        :halign "start"
+        :visible { page != 0 }
+        :onclick "eww update page=${page - 1}"
+        (
+          label
+          :text "←"
+        )
+      )
+      (
+        button
+        :class "next"
+        :halign "end"
+        :visible { (page + 1) * 16 < arraylength(wallpapers) }
+        :onclick "eww update page=${page + 1}"
+        (
+          label
+          :text "→"
+        )
+      )
+    )
+    (
+      button
+      :class "close"
+      :halign "end"
+      :valign "start"
+      :onclick "eww close wallpaper-picker"
+      (
+        label
+        :text "❌"
+      )
+    )
+  )
+)
+
+(
+  defwindow wallpaper-picker
+  :monitor 0
+  :stacking "fg"
+  :geometry (geometry :width "1400px" :height "800px" :anchor "center")
+  (wallpaper-picker)
+)
