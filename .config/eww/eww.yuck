@@ -90,9 +90,10 @@
       :halign "end"
       :valign "start"
       :onclick "eww close wallpaper-picker"
+      :width 150
       (
         label
-        :text "❌"
+        :text "⨯"
       )
     )
   )

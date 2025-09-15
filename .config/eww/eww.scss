@@ -46,17 +46,31 @@ $border-radius: 8px;
       font-size: 40px;
       font-weight: bold;
       color: $primary;
-      margin: 16px;
+
+      margin-left: 40px;
+      margin-right: 40px;
+      margin-bottom: 30px;
 
       &:hover {
         color: $primary_fixed;
+        border-color: $primary_fixed;
       }
     }
   }
 
   .close {
     background: none;
-    margin: 8px;
-    font-size: 22px;
+    color: $primary;
+    font-size: 48px;
+    font-weight: bold;
+
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 30px;
+
+    &:hover {
+      color: $on_error;
+      background: $error;
+    }
   }
 }
