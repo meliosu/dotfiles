@@ -6,12 +6,10 @@ if status is-interactive
     starship init fish | source
 end
 
-# Disable Greeting
-set fish_greeting ""
-
 # Aliases
-alias ls   "lsd"
-alias ll   "lsd -Al"
-alias cat  "bat"
-alias vim  "nvim"
-alias grep "rg"
+alias ls lsd
+alias ll "lsd -Al"
+alias cat bat
+alias vim nvim
+alias grep rg
+alias please sudo

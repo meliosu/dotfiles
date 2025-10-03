@@ -7,3 +7,4 @@
 - [ ] Make own rofi config
 - [ ] Reload nvchad config on wallpaper change
 - [ ] Customize swaync and add it to waybar
+- [ ] Change foot to kitty/ghostty/...
